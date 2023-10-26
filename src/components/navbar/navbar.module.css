@@ -6,7 +6,10 @@
 }
 .logo {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 30px;
+  background: linear-gradient(to bottom, #194c33, #bbb);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .links {
   display: flex;
