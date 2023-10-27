@@ -14,7 +14,7 @@ const About = () => {
           alt=""
         />
         <div className={styles.imgText}>
-          <h1 className={styles.imgTitle}>Digital storytellers</h1>
+          <h1 className={styles.imgTitle}>Digital story-tellers</h1>
           <h2 className={styles.imgDescription}>
             Handcrafting award wining digital experiance
           </h2>
@@ -23,7 +23,7 @@ const About = () => {
       <div className={styles.textContainer}>
         <div className={styles.item}>
           <h1>who are we?</h1>
-          <p>
+          <p className={styles.desc}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur
             minus a quaerat eaque eos odit, quisquam sint expedita doloremque
             dicta modi odio est aperiam in quo dolorum optio deleniti.
@@ -39,7 +39,7 @@ const About = () => {
         </div>
         <div className={styles.item}>
           <h1>What we do?</h1>
-          <p>
+          <p className={styles.desc}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
             commodi, odit blanditiis rerum ratione eos nemo? Iste ex quasi
             possimus, incidunt hic doloribus a expedita? Nostrum nulla, fugiat
