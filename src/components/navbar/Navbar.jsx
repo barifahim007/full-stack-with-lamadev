@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./navbar.module.css";
+import ToggleButton from "../Toogle/ToggleButton";
 
 const Navbar = () => {
   const links = [
@@ -18,6 +19,7 @@ const Navbar = () => {
         FAHIM
       </Link>
       <div className={styles.links}>
+        <ToggleButton />
         {links.map((link) => (
           <Link className={styles.link} key={link.id} href={link.href}>
             {link.title}
