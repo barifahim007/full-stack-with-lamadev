@@ -1,15 +1,26 @@
 import React from "react";
 import styles from "./dynamic.module.css";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
-const dynamicBlog = () => {
+async function getData(id) {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+
+  if (!res.ok) {
+    return notFound();
+  }
+
+  return res.json();
+}
+
+const dynamicBlog = async ({ params }) => {
+  const data = await getData(params.id);
+
   return (
     <div className={styles.main}>
       <div className={styles.headContainer}>
         <div className={styles.titleContainer}>
-          <h1 className={styles.headTitle}>
-            Think positive grow your will power.
-          </h1>
+          <h1 className={styles.headTitle}>{data.title}</h1>
           <p className={styles.heading}>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, sit
             <br />
